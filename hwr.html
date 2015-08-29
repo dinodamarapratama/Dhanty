@@ -12,7 +12,10 @@
 	
     font-family: 'Open Sans', sans-serif;
 	background:#fff;
+	background: url("images/bg2.jpg") no-repeat 0px 0px;
 }
+
+
 	 
 	  #content {
         overflow:hidden;
@@ -20,7 +23,7 @@
 	  }
 	  #canvas{
 		cursor:crosshair ;
-        background-color:#fff;
+       
 			
 	  }
 	  
@@ -212,7 +215,6 @@ $.fn.drawTouch = function() {
 		data4_s2 += data4_s1 ;
 		data5_s2 += data6_s1 ;
 		data6_s2 += data6_s1 ;
-		console.log(data1_s1 + " " + data2_s1 + " " + data5_s1);
 		mouseClick();
 		
 	};
@@ -270,11 +272,9 @@ $.fn.drawMouse = function() {
 				var angleRound = Math.floor(angle * 100);
 				//f = value < 0 ? Math.abs(value) : value;
 				if (angle < 0) angle += Math.PI * 2;
-				var no = Math.floor(angle / (Math.PI * 2) * 100);
-				//console.log(no);
+				var no = Math.floor(angle / (Math.PI * 2) * 100);		
 				moves.push(anglesMap[no]);
-				console.log(moves);
-				angleArray.push(angle);console.log(angleArray);
+				angleArray.push(angle);
 				data1_s1 = _.first(_.uniq(angleArray)) ;
 				data2_s1 = _.last(_.uniq(angleArray)) ;
 				data3_s1 = _.first(_.uniq(moves)) ;
@@ -1560,20 +1560,18 @@ function predict_spaceOrletter() {
 	//console.log(predict);
 	var obj = [19, 18, 15, 16, 14, 21, 25, 29, 32, 28, 31, 17, 27,30,22, 16, 23, 20, 26, 22,26, 33, 35, 27];
     var test = _.includes(obj,data5_s1);
-	console.log(test);	
-	console.log(data5_s1);	
-	console.log(obj);
+
 	
 	var last = _.last(predict);
 
 	if ( data5_s2 == 0 ) {
 		svm_word += _.first(classifystepFinalLabel);
-		console.log(svm_word);
+		
 	} 
 	
 	else {
         svm_word += _.last(classifystepFinalLabel) ;
-		console.log(svm_word);
+		
 	
 	}
 	//console.log(classifystepFinalLabel	);
@@ -2101,14 +2099,14 @@ function mouseClick() {
 		} else {
 			syllable += "K";
 		}
-		console.log(syllable);
+		
 	}
 
            var result = _.filter(list_syllable, function(obj) {
 
 	if (_.isEqual(obj.syllable, syllable)) {
 		hasil = obj.id;
-		console.log(obj.id);
+		
 	}
 
           });
@@ -2643,7 +2641,6 @@ function mouseClick() {
                         },
                         // error callback
                         function(e) {
-                            console.log("Error getting pos=" + e);
                             setAudioPosition("Error: " + e);
                         }
                     );
@@ -2672,7 +2669,7 @@ function mouseClick() {
         // onSuccess Callback
         //
         function onSuccess() {
-            console.log("playAudio():Audio Success");
+         
         }
 
         // onError Callback 

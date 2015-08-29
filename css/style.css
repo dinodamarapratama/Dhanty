@@ -10,6 +10,7 @@ body{
 	font-family: 'Open Sans', sans-serif;
 	background:#fff;
 	position:relative;
+	background: url("../images/bg2.jpg") no-repeat 0px 0px;
 }
 body a{
     transition:0.5s all;
@@ -2242,8 +2243,8 @@ color: #EC5844;
 	.slider-bg {
 	  background: url("../images/bg.jpg") no-repeat 0px 0px;
 	  padding: 4.5em 0 0 0;
-	  background-size : 100% 200px;
-	  min-height: 210px;
+	  background-size : 100% 250px;
+	  min-height: 260px;
 	}
 	.container {
 	  /* width:590px; */
@@ -2420,9 +2421,9 @@ color: #EC5844;
 @media (max-width:480px){
 	.slider-bg {
 	  background: url("../images/bg.jpg") no-repeat 0px 0px;
-	  background-size : 100% 150px;
+	  background-size : 100% 180px;
 	  padding:3.5em 0 0 0;
-		min-height: 164px;
+		min-height: 184px;
 	}
 	.left-grid-1 {
 	  margin-top: 0em;
@@ -2703,9 +2704,9 @@ color: #EC5844;
 	}
 	.slider-bg {
 	  background: url("../images/bg.jpg") no-repeat 0px 0px;
-	  background-size : 100% 120px;
+	  background-size : 100% 130px;
 	  padding: 2.2em 0 0 0;
-	  min-height: 130px;
+	  min-height: 140px;
 	}
 	ul.callbacks_tabs.callbacks1_tabs {
        bottom: -13.7%;
